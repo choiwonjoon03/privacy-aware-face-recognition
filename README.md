@@ -43,7 +43,7 @@ privacy-aware-face-recognition/
 ├─ .env.example     # API keys template (no secrets)
 ├─ requirements.txt
 └─ README.md
-
+```
 ---
 
 ## 🔧 Setup
