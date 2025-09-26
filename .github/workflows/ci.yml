@@ -22,5 +22,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
+      - name: Set PYTHONPATH so tests can import src/*
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
       - name: Run tests
         run: pytest -q
