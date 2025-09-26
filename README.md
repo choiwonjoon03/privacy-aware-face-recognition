@@ -47,6 +47,7 @@ privacy-aware-face-recognition/
 ---
 
 ## 🔧 Setup
+
 ```bash
 # 1) clone
 git clone https://github.com/<YOUR-ACCOUNT>/privacy-aware-face-recognition.git
