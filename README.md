@@ -79,4 +79,11 @@ python src/compare/run_deepface_compare.py --folder "data/samples" --source "0so
 python src/compare/run_aws_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/aws_results.csv"
 # Face++
 python src/compare/run_facepp_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/facepp_results.csv"
+```
+# Merge (example)
+python src/analysis/merge_4models.py --aws results/csv/aws_results.csv --facepp results/csv/facepp_results.csv --facenet results/csv/facenet_results.csv --deepface results/csv/deepface_results.csv --out results/csv/merged.csv
+
+# Make text-only report (summary.md + topk.csv + bottomk.csv)
+python src/analysis/make_report.py --in results/csv/merged.csv --out results --topk 10
+
 
