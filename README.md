@@ -69,34 +69,17 @@ cp .env.example .env
 # then open .env to put your keys (never commit .env)
 ```
 
-### Quick run (examples)
+### 🖼️ Use with your own images
 ```bash
-# Facenet
-python src/compare/run_facenet_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/facenet_results.csv"
-# DeepFace (ArcFace)
-python src/compare/run_deepface_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/deepface_results.csv"
-# AWS Rekognition
-python src/compare/run_aws_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/aws_results.csv"
-# Face++
-python src/compare/run_facepp_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/facepp_results.csv"
+# Put your images in a folder. Example:
+#  - source: myface.jpg
+#  - variants: v1.jpg, v2.png, ...
+
+# Facenet + DeepFace only (no API keys needed)
+python src/cli.py --folder "C:/path/to/myfolder" --source "myface.jpg" --engines facenet,deepface
+
+# All engines (AWS/Face++ keys required in .env)
+python src/cli.py --folder "C:/path/to/myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
 ```
-### Report
-
-```bash
-# Merge (example)
-python src/analysis/merge_4models.py \
-  --aws results/csv/aws_results.csv \
-  --facepp results/csv/facepp_results.csv \
-  --facenet results/csv/facenet_results.csv \
-  --deepface results/csv/deepface_results.csv \
-  --out results/csv/merged.csv
-
-# Make text-only report (summary.md + topk.csv + bottomk.csv)
-python src/analysis/make_report.py \
-  --in results/csv/merged.csv \
-  --out results \
-  --topk 10
-```
-
 
 
