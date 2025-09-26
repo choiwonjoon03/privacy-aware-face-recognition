@@ -6,6 +6,9 @@ _Reproducible benchmark of privacy-aware face recognition: multi-model similarit
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
+[![CI](https://github.com/choiwonjoon03/privacy-aware-face-recognition/actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
+
+
 ## ✨ What is this?
 An end-to-end benchmark to evaluate **privacy-aware face recognition**.  
 It compares an original face image against many **style/filtered variants**, computes **similarity scores** across multiple engines, and assesses **de-identification safety** with bucketed risk labels.
