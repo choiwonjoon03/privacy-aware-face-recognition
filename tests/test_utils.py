@@ -1,4 +1,7 @@
 # tests/test_utils.py
+import sys, os
+sys.path.insert(0, os.getcwd())  # make repo root importable
+
 from src.utils.filename_cleaner import clean_filename
 from src.utils.bucketer import bucket_from_p
 
