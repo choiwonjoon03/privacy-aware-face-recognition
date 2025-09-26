@@ -11,7 +11,7 @@ An end-to-end benchmark to evaluate **privacy-aware face recognition**.
 It compares an original face image against many **style/filtered variants**, computes **similarity scores** across multiple engines, and assesses **de-identification safety** with bucketed risk labels.
 
 - Engines: **FaceNet**, **DeepFace**, **AWS Rekognition**, **Face++**
-- Outputs: cleaned CSVs, ranked top/bottom lists, summary tables, optional charts
+- Outputs: cleaned CSVs, ranked top/bottom lists, text summary (no images)
 - Goals: reproducible pipeline → clear **privacy risk** interpretation
 
 ---
