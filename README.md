@@ -67,3 +67,16 @@ pip install -r requirements.txt
 # 4) secrets (copy and edit)
 cp .env.example .env
 # then open .env to put your keys (never commit .env)
+```
+
+### Quick run (examples)
+```bash
+# Facenet
+python src/compare/run_facenet_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/facenet_results.csv"
+# DeepFace (ArcFace)
+python src/compare/run_deepface_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/deepface_results.csv"
+# AWS Rekognition
+python src/compare/run_aws_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/aws_results.csv"
+# Face++
+python src/compare/run_facepp_compare.py --folder "data/samples" --source "0source.jpg" --outfile "results/csv/facepp_results.csv"
+
