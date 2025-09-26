@@ -17,6 +17,8 @@ It compares an original face image against many **style/filtered variants**, com
 ---
 
 ## 📦 Project Structure
+
+```text
 privacy-aware-face-recognition/
 ├─ src/
 │  ├─ compare/
@@ -41,8 +43,6 @@ privacy-aware-face-recognition/
 ├─ .env.example     # API keys template (no secrets)
 ├─ requirements.txt
 └─ README.md
-
-> **Note**  
 
 ---
 
