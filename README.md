@@ -91,12 +91,10 @@ pip install -r requirements.txt
 
 ### 4) Set API Keys (Optional)
 ```bash
-cp .env.example .env
-# Edit .env with your keys (do NOT commit .env)
-# AWS_ACCESS_KEY_ID=...
-# AWS_SECRET_ACCESS_KEY=...
-# FACEPP_API_KEY=...
-# FACEPP_API_SECRET=...
+AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
+FACEPP_API_KEY=YOUR_FACEPP_API_KEY
+FACEPP_API_SECRET=YOUR_FACEPP_API_SECRET
 ```
 
 ---
