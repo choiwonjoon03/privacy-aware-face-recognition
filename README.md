@@ -102,15 +102,28 @@ cp .env.example .env
 ---
 
 ## 🖼️ Use with Your Own Images
+
+### Folder layout (example)
+```text
+myfolder/
+├─ myface.jpg          # source
+├─ v1.jpg              # variant
+└─ v2.png              # variant
+```
+
+### Run (no cloud APIs: Facenet + DeepFace)
 ```bash
-# Example folder layout
-#   myfolder/
-#     myface.jpg        (source)
-#     v1.jpg v2.png ... (variants)
-
-# Facenet + DeepFace only (no API needed)
 python src/cli.py --folder "C:/path/to/myfolder" --source "myface.jpg" --engines facenet,deepface
+```
 
-# All engines (requires keys in .env)
+### Run (all engines: requires keys in .env)
+```bash
 python src/cli.py --folder "C:/path/to/myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
+```
+
+### Notes
+- Put **myface.jpg** and its variants (**v1.jpg**, **v2.png**, …) under the same folder.
+- For macOS/Linux, replace the Windows path with a POSIX path, for example:
+```bash
+python src/cli.py --folder "/Users/you/myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
