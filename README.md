@@ -19,7 +19,7 @@ A **reproducible benchmark** for privacy‑aware face recognition:
 - Assign **de‑identification risk buckets**
 
 **Engines**: FaceNet, DeepFace, AWS Rekognition, Face++  
-**Outputs**: cleaned CSVs, ranked lists, short text summary (no images)  
+**Outputs**: cleaned CSVs, ranked lists, concise text summary (no images)  
 **Focus**: reproducibility (scriptable CLI, pinned dependencies)
 
 ---
@@ -66,7 +66,7 @@ Create and activate a Python virtual environment.
 - **Windows (PowerShell)**
 ```powershell
 python -m venv venv
-venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 ```
 > If blocked by policy: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
@@ -95,10 +95,22 @@ pip install -r requirements.txt
 ```
 
 ### 4) Set API Keys (Optional)
+
 **Step 1. Copy template → `.env`**
+- **macOS / Linux / Windows Git Bash**
 ```bash
 cp .env.example .env
 ```
+- **Windows (PowerShell)**
+```powershell
+Copy-Item .env.example .env
+# or: cp .env.example .env
+```
+- **Windows (CMD)**
+```bat
+copy .env.example .env
+```
+
 **Step 2. Fill your keys in `.env`**
 ```dotenv
 AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
@@ -106,6 +118,7 @@ AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
 FACEPP_API_KEY=YOUR_FACEPP_API_KEY
 FACEPP_API_SECRET=YOUR_FACEPP_API_SECRET
 ```
+
 **Step 3. Keep secrets out of Git**
 ```gitignore
 # keep secrets local
@@ -124,14 +137,20 @@ myfolder/
 `-- v2.png              # variant (Source3)
 ```
 
-### ✅ Run (choose one engines set)
+### ✅ Run (choose one engine set)
 
 - **Local only** (no cloud keys): `facenet,deepface`  
 - **All engines** (requires keys in `.env`): `facenet,deepface,aws,facepp`
 
-**Windows (PowerShell, CMD)**
+**Windows (PowerShell)**
 ```powershell
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
+```
+
+**Windows (CMD)**
+```bat
+REM choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
 python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
