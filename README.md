@@ -14,7 +14,7 @@ This project is licensed under the **MIT License**. See **[LICENSE](LICENSE)** f
 
 ## 🔍 What is this?
 A **reproducible benchmark** for privacy‑aware face recognition:
-- Compare an original face vs. **style/filtered variants**
+- Compare an original face vs. **style/filtered variants** (or another face)
 - Compute **similarity scores** with multiple engines
 - Assign **de‑identification risk buckets**
 
@@ -120,8 +120,8 @@ FACEPP_API_SECRET=YOUR_FACEPP_API_SECRET
 ```text
 myfolder/
 |-- myface.jpg          # source
-|-- v1.jpg              # variant
-`-- v2.png              # variant
+|-- v1.jpg              # variant (source2)
+`-- v2.png              # variant (Source3)
 ```
 
 ### ✅ Run (choose one engines set)
