@@ -132,23 +132,23 @@ myfolder/
 **Windows (PowerShell)**
 ```powershell
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
-python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines facenet,deepface
+python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
 **Windows (CMD)**
 ```bat
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
-python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines facenet,deepface
+python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
 **Windows (Git Bash, POSIX path)**
 ```bash
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
-python src\cli.py --folder "C:\path/to\myfolder" --source "myface.jpg" --engines facenet,deepface
+python src/cli.py --folder "C:/path/to/myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
 **macOS / Linux**
 ```bash
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
-python src\cli.py --folder "\Users\you\myfolder" --source "myface.jpg" --engines facenet,deepface
+python src/cli.py --folder "/Users/you/myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
