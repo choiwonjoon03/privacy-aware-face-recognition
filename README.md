@@ -62,13 +62,13 @@ Create and activate a Python virtual environment.
 - **Windows (PowerShell):**
 ```bash
 python -m venv venv
-.env\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 ```
 
 - **Windows (CMD):**
 ```bash
 python -m venv venv
-venv\Scriptsctivate.bat
+venv\Scripts\activate.bat
 ```
 
 - **Windows (Git Bash):**
