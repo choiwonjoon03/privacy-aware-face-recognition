@@ -51,27 +51,40 @@ privacy-aware-face-recognition/
 
 ## 🔧 Setup
 
+1) Clon
 ```bash
-# 1) clone
 git clone https://github.com/<YOUR-ACCOUNT>/privacy-aware-face-recognition.git
 cd privacy-aware-face-recognition
-
-# 2) python venv
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-# source venv/bin/activate
-
-# 3) deps
-pip install --upgrade pip
-pip install -r requirements.txt
-
-# 4) secrets (copy and edit)
-cp .env.example .env
-# then open .env to put your keys (never commit .env)
 ```
 
+3) Python Virtual Environment
+Create and activate a Python virtual environment.
+
+Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+macOS/Linux:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3) Install Dependencie
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+5) Set API Keys (Optional)
+```bash
+cp .env.example .env
+
+Edit the .env file with your API keys (do not commit .env)
+```
+```
 ### 🖼️ Use with your own images
 ```bash
 # Put your images in a folder. Example:
