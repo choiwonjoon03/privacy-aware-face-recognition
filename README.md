@@ -124,28 +124,31 @@ myfolder/
 `-- v2.png              # variant
 ```
 
-## ✅ Run Commands (Copy/Paste Safe)
+### ✅ Run (choose one engines set)
 
-### Windows (PowerShell)
+- **Local only** (no cloud keys): `facenet,deepface`  
+- **All engines** (requires keys in `.env`): `facenet,deepface,aws,facepp`
+
+**Windows (PowerShell)**
 ```powershell
-python src/cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
-python src/cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
+# choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
-### Windows (CMD)
+**Windows (CMD)**
 ```bat
-python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
-python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
+REM choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
-### Windows (Git Bash, POSIX-style path)
+**Windows (Git Bash, POSIX path)**
 ```bash
-python src/cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
-python src/cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
+# choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+python src\cli.py --folder "C:\path/to\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
-### macOS / Linux
+**macOS / Linux**
 ```bash
-python src/cli.py --folder "\Users\you\myfolder" --source "myface.jpg" --engines facenet,deepface
-python src/cli.py --folder "\Users\you\myfolder" --source "myface.jpg" --engines facenet,deepface,aws,facepp
+# choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+python src\cli.py --folder "\Users\you\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
