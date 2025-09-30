@@ -79,13 +79,13 @@ venv\Scripts\activate.bat
 - **Windows (Git Bash)**
 ```bash
 python -m venv venv
-source venv\Scripts\activate
+source venv/Scripts/activate
 ```
 
 - **macOS / Linux**
 ```bash
 python3 -m venv venv
-source venv\bin\activate
+source venv/bin/activate
 ```
 
 ### 3) Install Dependencies
@@ -129,14 +129,8 @@ myfolder/
 - **Local only** (no cloud keys): `facenet,deepface`  
 - **All engines** (requires keys in `.env`): `facenet,deepface,aws,facepp`
 
-**Windows (PowerShell)**
+**Windows (PowerShell, CMD)**
 ```powershell
-# choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
-python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
-```
-
-**Windows (CMD)**
-```bat
 # choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
 python src\cli.py --folder "C:\path\to\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
