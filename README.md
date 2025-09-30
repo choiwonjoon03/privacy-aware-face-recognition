@@ -137,7 +137,7 @@ python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines 
 
 **Windows (CMD)**
 ```bat
-REM choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
+# choose engines: facenet,deepface  OR  facenet,deepface,aws,facepp
 python src\cli.py --folder "C:\path	o\myfolder" --source "myface.jpg" --engines facenet,deepface
 ```
 
